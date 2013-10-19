@@ -11,14 +11,14 @@ public class Player : MonoBehaviour
     private const float MAX_SPEED = 5.0f;                                //最高速度
 
     private float fSpeed;                                                 //プレイヤーのスピード
-    private int nCenter;                                                  //画面幅の半分
+    //private int nCenter;                                                  //画面幅の半分
     private float fDistance;                                              //総移動距離
 
 	// Use this for initialization
 	void Start()
     {
         fSpeed = INIT_SPEED;                                //初期スピードを設定
-        nCenter = Screen.width / 2;                         //画面幅の半分
+        //nCenter = Screen.width / 2;                         //画面幅の半分
         fDistance = 0.0f;                                   //総移動距離を初期化
 	}
 	

@@ -1,66 +1,76 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+//スコア構造体
+public struct SCORE
+{
+    public float fDistance;     //そのステージで進んだ距離
+    public float fMaxSpeed;     //そのステージでの最高速度
+    public int nUpItemNum;      //そのステージ取得したプラス効果のアイテム数
+    public int nDownItemNum;    //そのステージ取得したマイナス効果のアイテム数
+}
+
 public class GameSystem : MonoBehaviour
 {
     [SerializeField]
     private GameObject cPlayer;
     private float fStartTime,fNowTime;
-    private string sNowStatus,sPreStatus;
+    private string strNowStatus,strPreStatus;
+    private SCORE sScore;
 
     void Start()
     {
         cPlayer = GameObject.Find("Player");          //プレイヤーのオブジェクトを取得
-        sNowStatus = "LAND_START";                    //ステージのステータスを"開始前"に設定
-        sPreStatus = "LAND_START";                    //ステージの前のステータスを"開始前"に設定
+        strNowStatus = "LAND_START";                  //ステージのステータスを"開始前"に設定
+        strPreStatus = "LAND_START";                  //ステージの前のステータスを"開始前"に設定
         fStartTime = Time.time;                       //アクションシーン開始時の時間
     }
 
     void Update()
     {
         //変更前のステータスを保持
-        sPreStatus = sNowStatus;
+        strPreStatus = strNowStatus;
 
         if (fNowTime < 20)
         {
-            if (sPreStatus == "LAND_START")
+            if (strPreStatus == "LAND_START")
             {
-                sNowStatus = "LAND";
+                strNowStatus = "LAND";
             }
         }
         else if(fNowTime < 40)
         {
-            if(sPreStatus == "LAND")
+            if(strPreStatus == "LAND")
             {
-                sNowStatus = "LAND_END";
+                strNowStatus = "LAND_END";
             }
-            else if (sPreStatus == "LAND_END")
+            else if (strPreStatus == "LAND_END")
             {
-                sNowStatus = "SEA_START";
+                strNowStatus = "SEA_START";
             }
-            else if (sPreStatus == "SEA_START")
+            else if (strPreStatus == "SEA_START")
             {
-                sNowStatus = "SEA";
+                strNowStatus = "SEA";
             }
         }
         else if(fNowTime < 60)
         {
-            if (sPreStatus == "SEA")
+            if (strPreStatus == "SEA")
             {
-                sNowStatus = "SEA_END";
+                strNowStatus = "SEA_END";
             }
-            else if (sPreStatus == "SEA_END")
+            else if (strPreStatus == "SEA_END")
             {
-                sNowStatus = "SKY_START";
+                strNowStatus = "SKY_START";
             }
-            else if (sPreStatus == "SKY_START")
+            else if (strPreStatus == "SKY_START")
             {
-                sNowStatus = "SKY";
+                strNowStatus = "SKY";
             }
         }
         else if (fNowTime >= 60)
         {
-            sNowStatus = "RESULT";
+            strNowStatus = "RESULT";
 
             //リザルトシーンを開始する
             Application.LoadLevel("ResultScene");
@@ -85,7 +95,7 @@ public class GameSystem : MonoBehaviour
         GUI.Box(new Rect(0, 30, 200, 20), "Distance:" + cPlayer.GetComponent<Player>().GetDistance().ToString("000000"));
 
         //ステージの進行状況(陸海空など)を表示
-        GUI.Box(new Rect(Screen.width - 80, 0, 60, 20), sNowStatus);
+        GUI.Box(new Rect(Screen.width - 80, 0, 60, 20), strNowStatus);
 
         //メニューボタンが押された時
         //if (GUI.Button(, ))
@@ -98,5 +108,5 @@ public class GameSystem : MonoBehaviour
     public float GetTime(){return fNowTime;}
 
     //ステージのステータスを返す
-    public string GetStatus(){return sNowStatus;}
+    public string GetStatus(){return strNowStatus;}
 }
