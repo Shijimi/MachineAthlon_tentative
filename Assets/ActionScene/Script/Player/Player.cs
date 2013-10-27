@@ -104,6 +104,8 @@ public class Player : MonoBehaviour
         //	総移動距離を加算.
         m_fDistance += m_fSpeed;
 		
+		//test
+		
 		//	速度により外見を変更する.
 		if(m_fSpeed < (MAX_SPEED/2))
 		{
