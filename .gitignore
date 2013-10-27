@@ -4,7 +4,6 @@
 
 *.pydevproject
 .project
-.metadata
 bin/
 tmp/
 *.tmp
@@ -217,6 +216,7 @@ pip-log.txt
 ############
 #Unity
 ############
+Library
 test_Data
 Temp
 *.pidb
