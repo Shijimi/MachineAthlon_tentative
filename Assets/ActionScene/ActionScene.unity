@@ -240,6 +240,7 @@ GameObject:
   - 114: {fileID: 1314411958}
   - 65: {fileID: 1314411955}
   - 54: {fileID: 1314411959}
+  - 111: {fileID: 1314411960}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -321,6 +322,24 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!111 &1314411960
+Animation:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1314411953}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 86dc5ddaaae8af44a8f46fe06289c6c7, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 86dc5ddaaae8af44a8f46fe06289c6c7, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+  m_UserAABB:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
 --- !u!1 &1398842890
 GameObject:
   m_ObjectHideFlags: 0
