@@ -473,7 +473,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_LandTex: {fileID: 2800000, guid: f666888438f2fe246849be15242ce9b5, type: 3}
-  m_SeeTex: {fileID: 2800000, guid: be18cf788985d7a4ab34f99403c44796, type: 3}
+  m_SeeTex: {fileID: 2800000, guid: 2df9f33537d1a5d4697c9142b9d758a3, type: 3}
   m_SkyTex: {fileID: 2800000, guid: 2c1dbf5ed6573a14ba8853efe2979d83, type: 3}
   materials: []
   vPos: {x: 0, y: 0}
