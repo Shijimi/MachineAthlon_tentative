@@ -307,6 +307,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba4b3e45b144138419543ae43f7aa7a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_fSpeed: 0
+  m_cFirst: {fileID: 2800000, guid: 2204e192476d658459750b170a004ade, type: 3}
+  m_cSecond: {fileID: 2800000, guid: bb369e2373e7b4f449590b356d1ac2af, type: 3}
+  m_cThird: {fileID: 2800000, guid: 340e2e4ad8a255146b4d1873f5dc942f, type: 3}
 --- !u!54 &1314411959
 Rigidbody:
   m_ObjectHideFlags: 0
