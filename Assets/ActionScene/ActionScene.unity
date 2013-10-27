@@ -420,7 +420,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 22aa721f2d809c84b8e03509f89f4a3c, type: 2}
+  - {fileID: 2100000, guid: 1b9e3da312418b24faf60d47c072394b, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -468,6 +468,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4584366ef74396b4cba00697ab919e65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_LandTex: {fileID: 2800000, guid: f666888438f2fe246849be15242ce9b5, type: 3}
+  m_SeeTex: {fileID: 2800000, guid: be18cf788985d7a4ab34f99403c44796, type: 3}
+  m_SkyTex: {fileID: 2800000, guid: 2c1dbf5ed6573a14ba8853efe2979d83, type: 3}
+  materials: []
   vPos: {x: 0, y: 0}
 --- !u!1 &2125548329
 GameObject:
