@@ -13,17 +13,18 @@ public class Player : MonoBehaviour
     private const float MAX_SPEED	=	5.0f;
 	//	最低速度.
 	private	const float	MIN_SPEED	=	0.0f;
-	
 	//	プレイヤーのスピード.
-    private float fSpeed;
+  	public float m_fSpeed;
 	//	速度の目標値.
 	private	float	m_fTragetSpeed;
-	//	画面幅の半分.
-    //private int nCenter;
 	//	総移動距離.
-    private float fDistance;
+    private float m_fDistance;
 	//	毎フレームごとのアニメーションの状態.
 	private	bool	m_AniFlg;
+	//	テクスチャ.
+	public Texture m_cFirst;
+	public Texture m_cSecond;
+	public Texture m_cThird;
 
 	// Use this for initialization
 	void Start()
@@ -32,15 +33,16 @@ public class Player : MonoBehaviour
 		m_AniFlg	=	false;
 		
 		//	初期スピードを設定.
-        fSpeed			=	0.0f;
+        m_fSpeed			=	0.0f;
 		//	速度の目標値を初期化.
 		m_fTragetSpeed	=	INIT_SPEED;
 		
-		//	画面幅の半分.
-        //nCenter = Screen.width / 2;
-		
 		//	総移動距離を初期化.
-        fDistance	=	0.0f;
+        m_fDistance	=	0.0f;
+		
+		//	初期テクスチャを設定.
+		renderer.material.mainTexture = m_cFirst;
+
 	}
 	
 	// Update is called once per frame
@@ -76,6 +78,7 @@ public class Player : MonoBehaviour
         {
             //	左に移動する.
             gameObject.transform.position -= new Vector3(1.0f, 0.0f, 0.0f);
+			
         }
 
         //	右クリック.
@@ -96,10 +99,24 @@ public class Player : MonoBehaviour
 		m_AniFlg	=	gameObject.animation.isPlaying;
 		
 		//	速度を目標速度に近づける.
-		fSpeed	=	Mathf.Lerp( fSpeed, m_fTragetSpeed, 0.05f );
+		m_fSpeed	=	Mathf.Lerp( m_fSpeed, m_fTragetSpeed, 0.05f );
 		
         //	総移動距離を加算.
-        fDistance += fSpeed;
+        m_fDistance += m_fSpeed;
+		
+		//	速度により外見を変更する.
+		if(m_fSpeed < (MAX_SPEED/2))
+		{
+			renderer.material.mainTexture = m_cFirst;
+		}
+		else if(m_fSpeed < MAX_SPEED)
+		{
+			renderer.material.mainTexture = m_cSecond;
+		}
+		else if(m_fSpeed >= MAX_SPEED)
+		{
+			renderer.material.mainTexture = m_cThird;
+		}
 	}
 
     //	オブジェクトに衝突した瞬間.
@@ -146,8 +163,8 @@ public class Player : MonoBehaviour
     }
 
     //	スピードを返す.
-    public float GetSpeed() { return fSpeed; }
+    public float GetSpeed() { return m_fSpeed; }
 
     //	総移動距離を返す.
-    public float GetDistance() { return fDistance; }
+    public float GetDistance() { return m_fDistance; }
 }
