@@ -103,22 +103,6 @@ public class Player : MonoBehaviour
 		
         //	総移動距離を加算.
         m_fDistance += m_fSpeed;
-		
-		//test
-		
-		//	速度により外見を変更する.
-		if(m_fSpeed < (MAX_SPEED/2))
-		{
-			renderer.material.mainTexture = m_cFirst;
-		}
-		else if(m_fSpeed < MAX_SPEED)
-		{
-			renderer.material.mainTexture = m_cSecond;
-		}
-		else if(m_fSpeed >= MAX_SPEED)
-		{
-			renderer.material.mainTexture = m_cThird;
-		}
 	}
 
     //	オブジェクトに衝突した瞬間.
@@ -161,6 +145,26 @@ public class Player : MonoBehaviour
 	
 	            break;
 	        }
+		}
+		
+		//======================================
+		//	速度により外見を変更する(数値は要調整).
+		//======================================
+		
+		//1段階目
+		if(m_fTragetSpeed < (MAX_SPEED/2))
+		{
+			renderer.material.mainTexture = m_cFirst;
+		}
+		//2段階目
+		else if(m_fTragetSpeed < MAX_SPEED)
+		{
+			renderer.material.mainTexture = m_cSecond;
+		}
+		//3段階目
+		else if(m_fTragetSpeed >= MAX_SPEED)
+		{
+			renderer.material.mainTexture = m_cThird;
 		}
     }
 
