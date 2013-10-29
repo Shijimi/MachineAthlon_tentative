@@ -1,13 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-//スコア構造体.
+//スコア構造体
 public struct SCORE
 {
-    public float fDistance;     //そのステージで進んだ距離.
-    public float fMaxSpeed;     //そのステージでの最高速度.
-    public int nUpItemNum;      //そのステージ取得したプラス効果のアイテム数.
-    public int nDownItemNum;    //そのステージ取得したマイナス効果のアイテム数.
+    public float fDistance;     //そのステージで進んだ距離
+    public float fMaxSpeed;     //そのステージでの最高速度
+    public int nUpItemNum;      //そのステージ取得したプラス効果のアイテム数
+    public int nDownItemNum;    //そのステージ取得したマイナス効果のアイテム数
 }
 
 public class GameSystem : MonoBehaviour
@@ -20,15 +20,15 @@ public class GameSystem : MonoBehaviour
 
     void Start()
     {
-        cPlayer = GameObject.Find("Player");          //プレイヤーのオブジェクトを取得.
-        strNowStatus = "LAND_START";                  //ステージのステータスを"開始前"に設定.
-        strPreStatus = "LAND_START";                  //ステージの前のステータスを"開始前"に設定.
-        fStartTime = Time.time;                       //アクションシーン開始時の時間.
+        cPlayer = GameObject.Find("Player");          //プレイヤーのオブジェクトを取得
+        strNowStatus = "LAND_START";                  //ステージのステータスを"開始前"に設定
+        strPreStatus = "LAND_START";                  //ステージの前のステータスを"開始前"に設定
+        fStartTime = Time.time;                       //アクションシーン開始時の時間
     }
 
     void Update()
     {
-        //変更前のステータスを保持.
+        //変更前のステータスを保持
         strPreStatus = strNowStatus;
 
         if (fNowTime < 20)
@@ -37,16 +37,9 @@ public class GameSystem : MonoBehaviour
             {
                 strNowStatus = "LAND";
             }
-			
-			if( fNowTime > 19 )
-				//	フェードイン.
-				Fade.FadeIn();
         }
-        else if( fNowTime < 40 && Fade.FadeFlg() == false )
+        else if(fNowTime < 40)
         {
-			//	フェードアウト.
-			Fade.FadeOut();
-			
             if(strPreStatus == "LAND")
             {
                 strNowStatus = "LAND_END";
@@ -59,17 +52,9 @@ public class GameSystem : MonoBehaviour
             {
                 strNowStatus = "SEA";
             }
-			
-			if( fNowTime > 39 ){
-				//	フェードイン.
-				Fade.FadeIn();
-			}
         }
-        else if( fNowTime < 60 && Fade.FadeFlg() == false )
+        else if(fNowTime < 60)
         {
-			//	フェードアウト.
-			Fade.FadeOut();
-			
             if (strPreStatus == "SEA")
             {
                 strNowStatus = "SEA_END";
@@ -82,10 +67,6 @@ public class GameSystem : MonoBehaviour
             {
                 strNowStatus = "SKY";
             }
-			
-			if( fNowTime > 59 )
-				//	フェードイン.
-				Fade.FadeIn();
         }
         else if (fNowTime >= 60)
         {
@@ -104,28 +85,28 @@ public class GameSystem : MonoBehaviour
         //画面サイズは考慮していません
         //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-        //経過時間を算出.
+        //経過時間を算出
         fNowTime = Time.time - fStartTime;
 
-        //時間を表示.
+        //時間を表示
         GUI.Box(new Rect(0,0,200,20),"Time:" + fNowTime.ToString("00.00"));
 
-        //距離を表示.
+        //距離を表示
         GUI.Box(new Rect(0, 30, 200, 20), "Distance:" + cPlayer.GetComponent<Player>().GetDistance().ToString("000000"));
 
-        //ステージの進行状況(陸海空など)を表示.
+        //ステージの進行状況(陸海空など)を表示
         GUI.Box(new Rect(Screen.width - 80, 0, 60, 20), strNowStatus);
 
-        //メニューボタンが押された時.
+        //メニューボタンが押された時
         //if (GUI.Button(, ))
         //{
         //   //リトライなど
         //}
     }
 
-    //時間を返す.
+    //時間を返す
     public float GetTime(){return fNowTime;}
 
-    //ステージのステータスを返す.
+    //ステージのステータスを返す
     public string GetStatus(){return strNowStatus;}
 }
