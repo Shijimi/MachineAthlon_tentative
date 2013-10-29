@@ -6,19 +6,19 @@ using System.Collections;
 //===========================
 public class Player : MonoBehaviour
 {
-    [SerializeField]
+	[SerializeField]
 	//	初期速度.
-    private const float INIT_SPEED	=	1.0f;
+	private const float INIT_SPEED	=	1.0f;
 	//	最高速度.
-    private const float MAX_SPEED	=	5.0f;
+	private const float MAX_SPEED	=	5.0f;
 	//	最低速度.
 	private	const float	MIN_SPEED	=	0.0f;
 	//	プレイヤーのスピード.
-  	public float m_fSpeed;
+	public float m_fSpeed;
 	//	速度の目標値.
 	private	float	m_fTragetSpeed;
 	//	総移動距離.
-    private float m_fDistance;
+	private float m_fDistance;
 	//	毎フレームごとのアニメーションの状態.
 	private	bool	m_AniFlg;
 	//	テクスチャ.
@@ -28,17 +28,18 @@ public class Player : MonoBehaviour
 
 	// Use this for initialization
 	void Start()
-    {
+	{
 		//	フラグを初期化.
 		m_AniFlg	=	false;
 		
 		//	初期スピードを設定.
-        m_fSpeed			=	0.0f;
+		m_fSpeed			=	0.0f;
+
 		//	速度の目標値を初期化.
 		m_fTragetSpeed	=	INIT_SPEED;
 		
 		//	総移動距離を初期化.
-        m_fDistance	=	0.0f;
+		m_fDistance	=	0.0f;
 		
 		//	初期テクスチャを設定.
 		renderer.material.mainTexture = m_cFirst;
@@ -69,25 +70,24 @@ public class Player : MonoBehaviour
         //    }
         //}
 
-        gameObject.transform.rotation = new Quaternion(0.0f, 180.0f, 0.0f, 0.0f);
+		gameObject.transform.rotation = new Quaternion(0.0f, 180.0f, 0.0f, 0.0f);
+		
+		//画面外判定を行う
+		Vector3 vViewPos = Camera.main.WorldToViewportPoint(gameObject.transform.position);
+		
+		//左クリックが押されている かつ 画面の左端へでない かつ スピードが0でない場合.
+		if ( Input.GetMouseButton(0) && vViewPos.x > 0 && m_fTragetSpeed != MIN_SPEED )
+		{
+			//	左に移動する.
+			gameObject.transform.position -= new Vector3(1.0f, 0.0f, 0.0f);
+		}
 
-        //	左クリック.
-		//	???
-        if ( Input.GetMouseButton(0) && Camera.main.WorldToScreenPoint(gameObject.transform.position).x > 0 &&
-			 m_fTragetSpeed != MIN_SPEED )
-        {
-            //	左に移動する.
-            gameObject.transform.position -= new Vector3(1.0f, 0.0f, 0.0f);
-			
-        }
-
-        //	右クリック.
-        if ( Input.GetMouseButton(1) && Camera.main.WorldToScreenPoint(gameObject.transform.position).x < Screen.width &&
-			 m_fTragetSpeed != MIN_SPEED )
-        {
-            //	右に移動する.
-            gameObject.transform.position += new Vector3(1.0f, 0.0f, 0.0f);
-        }
+		//右クリックが押されている かつ 画面の右端へでない かつ スピードが0でない場合.
+		if ( Input.GetMouseButton(1) && vViewPos.x < 1 && m_fTragetSpeed != MIN_SPEED )
+		{
+			//	右に移動する.
+			gameObject.transform.position += new Vector3(1.0f, 0.0f, 0.0f);
+		}
 		
 		if( gameObject.animation.isPlaying == false && m_AniFlg == true )
 		{
@@ -106,45 +106,44 @@ public class Player : MonoBehaviour
 	}
 
     //	オブジェクトに衝突した瞬間.
-    private void OnCollisionEnter(Collision collision)
-    {
+	private void OnCollisionEnter(Collision collision)
+	{
 		//	スリップ中は処理を中止.
 		if( m_fTragetSpeed != MIN_SPEED )
 		{
-	        switch(collision.gameObject.tag)
-	        {
-	            //	加速アイテムの場合.
-	            case "item_speed":
+			switch(collision.gameObject.tag)
+			{
+				//	加速アイテムの場合.
+				case "item_speed":
+
+					//	速度を加算.
+					if( m_fTragetSpeed < MAX_SPEED )m_fTragetSpeed += 0.5f;
 	
-	                //	速度を加算.
-	                if( m_fTragetSpeed < MAX_SPEED )
-						m_fTragetSpeed += 0.5f;
+					//	アイテムを消す.
+					Destroy( collision.gameObject );
 	
-	                //	アイテムを消す.
-	                Destroy( collision.gameObject );
-	
-	            break;
+				break;
 	
 	            //	壊れない障害物.
-	            case "obs_static":
+				case "obs_static":
 	
 	
-	            break;
+				break;
 	
 	            //	妨害アイテムの場合.
-	            case "obs_break":
+				case "obs_break":
 				
 					//	アニメーションの再生
 					gameObject.animation.Play();
 	
-	                //	目標速度を0にする.
+					//	目標速度を0にする.
 					m_fTragetSpeed	=	MIN_SPEED;
 	
-	                //	アイテムを消す.
-	                Destroy( collision.gameObject );
+					//	アイテムを消す.
+					Destroy( collision.gameObject );
 	
-	            break;
-	        }
+				break;
+			}
 		}
 		
 		//======================================
@@ -166,11 +165,11 @@ public class Player : MonoBehaviour
 		{
 			renderer.material.mainTexture = m_cThird;
 		}
-    }
+	}
 
-    //	スピードを返す.
-    public float GetSpeed() { return m_fSpeed; }
+	//	スピードを返す.
+	public float GetSpeed() { return m_fSpeed; }
 
-    //	総移動距離を返す.
-    public float GetDistance() { return m_fDistance; }
+	//	総移動距離を返す.
+	public float GetDistance() { return m_fDistance; }
 }
