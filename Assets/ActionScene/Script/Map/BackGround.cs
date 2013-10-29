@@ -6,9 +6,9 @@ using System.Collections;
 //=====================================
 public class BackGround : MonoBehaviour {
 	
-	public	Texture	m_LandTex;
-	public	Texture	m_SeeTex;
-	public	Texture	m_SkyTex;
+	public	Texture		m_LandTex;
+	public	Texture		m_SeeTex;
+	public	Texture		m_SkyTex;
 	
 	public	Material[]	materials;
 	
@@ -47,8 +47,6 @@ public class BackGround : MonoBehaviour {
         {
             //陸ステージ開始.
             case "LAND_START":
-                
-                //陸のテクスチャに変更.
 
             break;
 
