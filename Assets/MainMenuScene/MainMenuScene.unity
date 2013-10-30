@@ -151,11 +151,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 745832793}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fcbee50e9a6972d418bd788fa05b5aa0, type: 3}
+  m_Script: {fileID: 11500000, guid: 62502e1ef42553f4c81dcd38a6679173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FadeTex: {fileID: 2800000, guid: 08310b22f9fa9e249b2a0d66f0d1dafd, type: 3}
-  m_alpha: 1
+  m_FadeTex: {fileID: 2800000, guid: ab1d20b567434cd4082963aa1c24724b, type: 3}
+  m_alpha: 0
 --- !u!23 &745832795
 Renderer:
   m_ObjectHideFlags: 0
@@ -212,7 +212,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1022975485}
-  - 114: {fileID: 1022975486}
+  - 114: {fileID: 1022975487}
   m_Layer: 0
   m_Name: Menu
   m_TagString: Untagged
@@ -231,7 +231,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
---- !u!114 &1022975486
+--- !u!114 &1022975487
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -239,7 +239,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1022975484}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eaa74e32384497945b16de20896bac7b, type: 3}
+  m_Script: {fileID: 11500000, guid: 7c68745da7e39cb4eb785ddb943a5f0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1694507481
@@ -330,6 +330,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1694507481}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67dcabb59a779694c86406f53f69b1d7, type: 3}
+  m_Script: {fileID: 11500000, guid: 5f7c0bf38ebecb2418062dca0ab30085, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

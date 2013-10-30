@@ -43,7 +43,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 8c2b92e6a8627d545aafd7f9ab19a661, type: 2}
+  - {fileID: 2100000, guid: ac5bfdb9d00b24f44b63bd7d8df3ecdb, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -91,7 +91,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d457de2059199a4eaabf9161ecd172c, type: 3}
+  m_Script: {fileID: 11500000, guid: 70ea7b149e47e2940ac542fccf91e795, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cPlayer: {fileID: 0}
