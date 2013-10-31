@@ -467,7 +467,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c27a8bf2f9a42744391fa4d057b935af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Obj:
+  m_cObj:
   - {fileID: 100000, guid: 4fedf279e397c9145996a781b8508f1a, type: 2}
   - {fileID: 100000, guid: 15922f011c4f8ab4a96fae9865085b1c, type: 2}
   - {fileID: 0}
