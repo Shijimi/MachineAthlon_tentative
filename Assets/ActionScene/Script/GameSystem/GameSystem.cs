@@ -106,6 +106,8 @@ public class GameSystem : MonoBehaviour
 
         //経過時間を算出.
         fNowTime = Time.time - fStartTime;
+		
+		Number.NumSet( (60 - (int)fNowTime) );
 
         //時間を表示.
         GUI.Box(new Rect(0,0,200,20),"Time:" + fNowTime.ToString("00.00"));
