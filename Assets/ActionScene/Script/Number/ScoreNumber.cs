@@ -15,11 +15,7 @@ public class ScoreNumber : MonoBehaviour {
 		m_NumTex	=	GetComponent<GUITexture>().texture;
 	}
 	
-	// Update is called once per frame
-	void Update () {
-	}
-	
-	void	OnGUI(){
+	void	OnGUI(){		
 		//	Event.current.type が EventType.Repaint の場合に限定.
 		if (Event.current.type == EventType.Repaint){
 			
