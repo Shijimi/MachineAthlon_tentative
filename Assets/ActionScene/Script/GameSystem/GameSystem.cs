@@ -33,6 +33,9 @@ public class GameSystem : MonoBehaviour
 
         if (fNowTime < 20)
         {
+			//	フェードアウト.
+			Fade.FadeOut();
+			
             if (strPreStatus == "LAND_START")
             {
                 strNowStatus = "LAND";
@@ -118,13 +121,13 @@ public class GameSystem : MonoBehaviour
 		//	二桁目のタイムを反映.
 		TimeNumber2.TimeSet2(time / 10 * 0.1f);
         //時間を表示.
-        GUI.Box(new Rect(0,0,200,20),"Time:" + fNowTime.ToString("00.00"));
+        //GUI.Box(new Rect(0,0,200,20),"Time:" + fNowTime.ToString("00.00"));
 
         //距離を表示.
-        GUI.Box(new Rect(0, 30, 200, 20), "Distance:" + cPlayer.GetComponent<Player>().GetDistance().ToString("000000"));
+        //GUI.Box(new Rect(0, 30, 200, 20), "Distance:" + cPlayer.GetComponent<Player>().GetDistance().ToString("000000"));
 
         //ステージの進行状況(陸海空など)を表示.
-        GUI.Box(new Rect(Screen.width - 80, 0, 60, 20), strNowStatus);
+        //GUI.Box(new Rect(Screen.width - 80, 0, 60, 20), strNowStatus);
 
         //メニューボタンが押された時.
         //if (GUI.Button(, ))

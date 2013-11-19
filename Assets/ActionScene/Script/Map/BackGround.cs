@@ -34,7 +34,7 @@ public class BackGround : MonoBehaviour {
 	// Update is called once per frame.
 	void Update()
     {
-        vMove = new Vector2(0, -(cPlayer.GetComponent<Player>().GetSpeed())*0.004f);
+        vMove = new Vector2(0, -(cPlayer.GetComponent<Player>().GetSpeed())*0.0085f);
 
         //移動ベクトルを座標に加算.
         vPos += vMove;

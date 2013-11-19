@@ -34,14 +34,14 @@ public class ResultMenu : MonoBehaviour
 
     void OnGUI()
     {
-        if (GUI.Button(new Rect(20, Screen.height / 2, 300, 40), "リトライ"))
+        if (GUI.Button(new Rect(210, Screen.height / 2, 300, 40), "リトライ"))
         {
 			Fade.FadeIn();
 			m_fadeFlg	=	true;
 			m_next	=	NEXT_ACTION;
         }
 
-        if (GUI.Button(new Rect(20, Screen.height / 2 + 60, 300, 40), "タイトルに戻る"))
+        if (GUI.Button(new Rect(210, Screen.height / 2 + 60, 300, 40), "タイトルに戻る"))
         {
 			Fade.FadeIn();
 			m_fadeFlg	=	true;

@@ -7,6 +7,9 @@ using System.Collections;
 
 public class CameraSetting : MonoBehaviour {
 
+    public float m_fViewHeight;
+    public float m_fViewWidth;
+
 	// Use this for initialization
 	void Start ()
     {
