@@ -13,14 +13,12 @@ public struct SCORE
 public class GameSystem : MonoBehaviour
 {
     [SerializeField]
-    private GameObject cPlayer;
     private float fStartTime,fNowTime;
     private string strNowStatus,strPreStatus;
     private SCORE sScore;
 
     void Start()
     {
-        cPlayer = GameObject.Find("Player");          //プレイヤーのオブジェクトを取得.
         strNowStatus = "LAND_START";                  //ステージのステータスを"開始前"に設定.
         strPreStatus = "LAND_START";                  //ステージの前のステータスを"開始前"に設定.
         fStartTime = Time.time;                       //アクションシーン開始時の時間.
