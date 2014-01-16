@@ -90,21 +90,22 @@ public class GameSystem : MonoBehaviour
         }
         else if (fNowTime >= 60)
         {
-            strNowStatus = "RESULT";
+            if (strPreStatus == "SKY")
+            {
+                strNowStatus = "SKY_END";
+            }
+            else if (strPreStatus == "SKY_END")
+            {
+                strNowStatus = "RESULT";
 
-            //リザルトシーンを開始する
-            Application.LoadLevel("ResultScene");
+                //リザルトシーンを開始する
+                Application.LoadLevel("ResultScene");
+            }
         }
     }
 
     void OnGUI()
     {
-
-        //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-        //GUIのサイズ関連はとりあえずで設定しているので
-        //画面サイズは考慮していません
-        //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
         //経過時間を算出.
         fNowTime = Time.time - fStartTime;
 		
@@ -112,26 +113,14 @@ public class GameSystem : MonoBehaviour
 		int	time	=	60 - (int)fNowTime;
 		
 		Number.NumSet( (60 - (int)fNowTime) );
+
+		TimeBar.TimeSet( fNowTime * 0.00833f );
 		
 		//	一桁目のタイムを反映.
 		TimeNumber1.TimeSet1(time % 10 * 0.1f);
 
 		//	二桁目のタイムを反映.
 		TimeNumber2.TimeSet2(time / 10 * 0.1f);
-        //時間を表示.
-        //GUI.Box(new Rect(0,0,200,20),"Time:" + fNowTime.ToString("00.00"));
-
-        //距離を表示.
-        //GUI.Box(new Rect(0, 30, 200, 20), "Distance:" + cPlayer.GetComponent<Player>().GetDistance().ToString("000000"));
-
-        //ステージの進行状況(陸海空など)を表示.
-        //GUI.Box(new Rect(Screen.width - 80, 0, 60, 20), strNowStatus);
-
-        //メニューボタンが押された時.
-        //if (GUI.Button(, ))
-        //{
-        //   //リトライなど
-        //}
     }
 
     //時間を返す.

@@ -14,7 +14,7 @@ public class Scroll : MonoBehaviour
 {
     [SerializeField]
     private GameObject cPlayer;
-	
+
 	//オブジェクトが消滅するときのZ座標.
 	private const float OBJ_REMOVE_POS_Z = -60;
 
@@ -33,5 +33,11 @@ public class Scroll : MonoBehaviour
 		
 		//画面外に出た場合はオブジェクトを削除する.
         if (gameObject.transform.position.z < OBJ_REMOVE_POS_Z){Destroy(gameObject);}
+
+        //フェード中の場合オブジェクトを削除する
+        if (Fade.FadeFlg())
+        {
+            Destroy(gameObject);
+        }
 	}
 }

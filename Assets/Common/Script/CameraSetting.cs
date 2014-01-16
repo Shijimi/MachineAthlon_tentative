@@ -25,7 +25,7 @@ public class CameraSetting : MonoBehaviour {
     void Awake()
     {
         Camera cam = gameObject.GetComponent<Camera>();
-        float baseAspect = 1136f / 640f;
+        float baseAspect = m_fViewHeight / m_fViewWidth;
         float nowAspect = (float)Screen.height / (float)Screen.width;
         float changeAspect;
 
@@ -39,6 +39,5 @@ public class CameraSetting : MonoBehaviour {
             changeAspect = baseAspect / nowAspect;
             cam.rect = new Rect(0, (1 - changeAspect) * 0.5f, 1, changeAspect);
         }
-        Destroy(this);
     }
 }

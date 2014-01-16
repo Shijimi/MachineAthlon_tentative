@@ -14,7 +14,7 @@ public class Fade : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		m_add		=	FADE_OUT;
-		m_fadeFlg	=	true;
+		m_fadeFlg	=	false;
 	}
 	
 	void	OnGUI(){
