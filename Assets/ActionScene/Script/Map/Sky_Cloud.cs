@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SkyCloud : MonoBehaviour
+public class Sky_Cloud : MonoBehaviour
 {
     private float m_fSpeed;
 	// Use this for initialization
@@ -9,11 +9,12 @@ public class SkyCloud : MonoBehaviour
     {
         renderer.material.color = new Color(1.0f, 1.0f, 1.0f, 0.5f);
         m_fSpeed = Random.Range(1, 5) * 0.5f;
+        //gameObject.transform.position += new Vector3(0.0f, 1.0f, 0.0f);
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
-        gameObject.transform.position -= new Vector3(0.0f, 0.0f, m_fSpeed);
+        gameObject.transform.position -= new Vector3(0.0f, -1.0f, m_fSpeed);
 	}
 }
