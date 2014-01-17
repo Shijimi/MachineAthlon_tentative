@@ -1079,6 +1079,7 @@ MonoBehaviour:
   m_cSkyObj:
   - {fileID: 100000, guid: 92e6b70586717be499e8c87456721e1d, type: 2}
   - {fileID: 100000, guid: 5372cd73788a47d4ab523697ce58de47, type: 2}
+  - {fileID: 100000, guid: 95d31cf1477ead24f855811870806a20, type: 2}
   - {fileID: 100000, guid: 3840e00afeb1ecc46b114ca1f054f174, type: 2}
 --- !u!1 &1515219934
 GameObject:
