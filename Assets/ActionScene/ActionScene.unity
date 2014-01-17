@@ -1075,6 +1075,7 @@ MonoBehaviour:
   m_cSeaObj:
   - {fileID: 100000, guid: 5d781ede6bad0434fb9b39c4e075b2cf, type: 2}
   - {fileID: 100000, guid: 8b0b643d121fda541b1ce364e06536f2, type: 2}
+  - {fileID: 100000, guid: 89633af5a498fbd41baadc6ffbb3a7aa, type: 2}
   m_cSkyObj:
   - {fileID: 100000, guid: 92e6b70586717be499e8c87456721e1d, type: 2}
   - {fileID: 100000, guid: 5372cd73788a47d4ab523697ce58de47, type: 2}

@@ -18,6 +18,7 @@ public class ObjCreator : MonoBehaviour
     {
         SEA_SPEED_UP = 0,
         SEA_SPEED_DOWN,
+        SEA_ENEMY,
         NUM
     }
 
