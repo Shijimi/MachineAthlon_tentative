@@ -26,6 +26,7 @@ public class ObjCreator : MonoBehaviour
     {
         SKY_SPEED_UP = 0,
         SKY_SPEED_DOWN,
+        SKY_BLIND,
         NUM
     }
 
