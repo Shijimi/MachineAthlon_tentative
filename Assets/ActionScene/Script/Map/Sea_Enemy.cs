@@ -15,6 +15,8 @@ public class Sea_Enemy : MonoBehaviour
     private int m_nNowState;
     private GameObject m_cPlayer;
 
+    private static float ATTACK_DISTANCE = 5.0f;
+
 	// Use this for initialization
 	void Start ()
     {
@@ -26,7 +28,17 @@ public class Sea_Enemy : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-        Vector3 vMove = Vector3.Normalize(m_cPlayer.transform.position - gameObject.transform.position) * 0.5f;
-        gameObject.transform.position += new Vector3(vMove.x,0.0f,0.0f);
+        Vector3 vDistance = m_cPlayer.transform.position - gameObject.transform.position;
+        Vector3 vMove = Vector3.Normalize(vDistance) * 0.5f;
+
+        if (Mathf.Abs(vDistance.z) < ATTACK_DISTANCE)
+        {
+            m_nNowState = (int)STATE.ATTACK;
+            vMove *= 2.0f;
+        }
+
+        //テクスチャの設定
+        renderer.material.mainTexture = m_cTexture[m_nNowState];
+        gameObject.transform.position += new Vector3(vMove.x, 0.0f, 0.0f);
 	}
 }
