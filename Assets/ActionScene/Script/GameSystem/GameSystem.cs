@@ -1,21 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-//スコア構造体.
-public struct SCORE
-{
-    public float fDistance;     //そのステージで進んだ距離.
-    public float fMaxSpeed;     //そのステージでの最高速度.
-    public int nUpItemNum;      //そのステージ取得したプラス効果のアイテム数.
-    public int nDownItemNum;    //そのステージ取得したマイナス効果のアイテム数.
-}
-
 public class GameSystem : MonoBehaviour
 {
     [SerializeField]
     private float fStartTime,fNowTime;
     private string strNowStatus,strPreStatus;
-    private SCORE sScore;
+    private const int STAGE_NUM = 3;
+    private const int STAGE_TIME = 20;
+    private int m_nNowStageNum = 0;
 
     void Start()
     {
@@ -29,7 +22,7 @@ public class GameSystem : MonoBehaviour
         //変更前のステータスを保持.
         strPreStatus = strNowStatus;
 
-        if (fNowTime < 20)
+        if (fNowTime < STAGE_TIME)
         {
 			//	フェードアウト.
 			Fade.FadeOut();
@@ -39,11 +32,11 @@ public class GameSystem : MonoBehaviour
                 strNowStatus = "LAND";
             }
 			
-			if( fNowTime > 19 )
+			if( fNowTime > STAGE_TIME - 1)
 				//	フェードイン.
 				Fade.FadeIn();
         }
-        else if( fNowTime < 40 && Fade.FadeFlg() == false )
+        else if( fNowTime < STAGE_TIME * 2 && Fade.FadeFlg() == false )
         {
 			//	フェードアウト.
 			Fade.FadeOut();
@@ -55,18 +48,19 @@ public class GameSystem : MonoBehaviour
             else if (strPreStatus == "LAND_END")
             {
                 strNowStatus = "SEA_START";
+                m_nNowStageNum++;
             }
             else if (strPreStatus == "SEA_START")
             {
                 strNowStatus = "SEA";
             }
 			
-			if( fNowTime > 39 ){
+			if( fNowTime > STAGE_TIME * 2 -1){
 				//	フェードイン.
 				Fade.FadeIn();
 			}
         }
-        else if( fNowTime < 60 && Fade.FadeFlg() == false )
+        else if( fNowTime < STAGE_TIME * 3 && Fade.FadeFlg() == false )
         {
 			//	フェードアウト.
 			Fade.FadeOut();
@@ -78,17 +72,18 @@ public class GameSystem : MonoBehaviour
             else if (strPreStatus == "SEA_END")
             {
                 strNowStatus = "SKY_START";
+                m_nNowStageNum++;
             }
             else if (strPreStatus == "SKY_START")
             {
                 strNowStatus = "SKY";
             }
 			
-			if( fNowTime > 59 )
+			if( fNowTime > STAGE_TIME * 3 - 1)
 				//	フェードイン.
 				Fade.FadeIn();
         }
-        else if (fNowTime >= 60)
+        else if (fNowTime >= STAGE_TIME * 3)
         {
             if (strPreStatus == "SKY")
             {
@@ -128,4 +123,13 @@ public class GameSystem : MonoBehaviour
 
     //ステージのステータスを返す.
     public string GetStatus(){return strNowStatus;}
+
+    //現在のステージ番号を返す
+    public int GetNowStageNum() { return m_nNowStageNum; }
+
+    //ステージ数を返す
+    public int GetStageNum() { return STAGE_NUM; }
+
+    //1ステージの時間を返す
+    public int GetStageTime() { return STAGE_TIME; }
 }
