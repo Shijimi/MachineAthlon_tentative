@@ -46,13 +46,13 @@ public class ObjCreator : MonoBehaviour
     }
 
     private const int LANE_NUM = 4;                        //オブジェクトを生成するレーンの数
-    private int m_nStageTime;                              //1ステージあたりの時間
-    private int m_nStageStartTime;                         //ステージの開始時間
-    private int m_nCreateTime;                             //ステージ開始を0としてオブジェクトを生成可能な秒数
-    private int m_nCreateBet;                              //オブジェクトを生成する間隔
-    private int m_nPreCreateTime;                          //前回オブジェクトを生成した時間
     private int m_nCreateObjID;                            //生成するオブジェクトのID
     private int m_nNowStageNum;                            //現在のステージ番号
+    private float m_fStageTime;                            //1ステージあたりの時間
+    private float m_fStageStartTime;                       //ステージの開始時間
+    private float m_fCreateTime;                           //ステージ開始を0としてオブジェクトを生成可能な秒数
+    private float m_fCreateBet;                             //オブジェクトを生成する間隔
+    private float m_fPreCreateTime;                          //前回オブジェクトを生成した時間
 
     //オブジェクトと生成個数
     //Unity側で変更できるようにあえて構造体を使用していません
@@ -104,8 +104,8 @@ public class ObjCreator : MonoBehaviour
         //ステージ関連の値を取得
         //----------------------------------------
         m_cGameSystem = GameObject.Find("GameSystem");          //ゲームシステムのオブジェクトを取得
-        m_nStageTime = m_cGameSystem.GetComponent<GameSystem>().GetStageTime();
-        m_nCreateTime = m_nStageTime - 3;
+        m_fStageTime = m_cGameSystem.GetComponent<GameSystem>().GetStageTime();
+        m_fCreateTime = m_fStageTime - 3.0f;
 
         //---------------------------------------
         //オブジェクトリストを作成する
@@ -146,22 +146,21 @@ public class ObjCreator : MonoBehaviour
 
                     //ステージ番号を取得
                     m_nNowStageNum =  m_cGameSystem.GetComponent<GameSystem>().GetNowStageNum();
-                    m_nStageStartTime = m_nStageTime * m_nNowStageNum;
+                    m_fStageStartTime = m_fStageTime * (float)m_nNowStageNum;
 
                     m_nCreateObjID = 0;
-                    m_nPreCreateTime = 0;
-                    m_nCreateBet = m_nCreateTime / m_nTotalObjNum[m_nNowStageNum];
+                    m_fPreCreateTime = 0.0f;
+                    m_fCreateBet = m_fCreateTime / m_nTotalObjNum[m_nNowStageNum];
 
                     break;
             }
 
-            int nNowTime = (int)m_cGameSystem.GetComponent<GameSystem>().GetTime() - m_nStageStartTime;
+            float fNowTime = m_cGameSystem.GetComponent<GameSystem>().GetTime() - m_fStageStartTime;
 
-            if (m_nTotalObjNum[m_nNowStageNum] > m_nCreateObjID && nNowTime % m_nCreateBet == 0
-                && nNowTime !=  m_nPreCreateTime && nNowTime <= m_nCreateTime)
+            if (m_nTotalObjNum[m_nNowStageNum] > m_nCreateObjID && fNowTime - m_fPreCreateTime > m_fCreateBet)
             {
                     cSetObj = m_cObj[m_nNowStageNum][m_nObjList[m_nNowStageNum][m_nCreateObjID]];
-                    m_nPreCreateTime = nNowTime;
+                    m_fPreCreateTime = fNowTime;
                     m_nCreateObjID++;
             }
 

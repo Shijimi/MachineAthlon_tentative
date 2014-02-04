@@ -1072,18 +1072,18 @@ MonoBehaviour:
   m_cLandObj:
   - {fileID: 100000, guid: f5d090140174473428e865bd387ed9ad, type: 2}
   - {fileID: 100000, guid: af8b8d5b6718c434b999801fdfe537ab, type: 2}
-  m_nLandObjNum: 0300000003000000
+  m_nLandObjNum: 0500000005000000
   m_cSeaObj:
   - {fileID: 100000, guid: 5d781ede6bad0434fb9b39c4e075b2cf, type: 2}
   - {fileID: 100000, guid: 8b0b643d121fda541b1ce364e06536f2, type: 2}
   - {fileID: 100000, guid: 89633af5a498fbd41baadc6ffbb3a7aa, type: 2}
-  m_nSeaObjNum: 030000000300000003000000
+  m_nSeaObjNum: 050000000300000002000000
   m_cSkyObj:
   - {fileID: 100000, guid: 92e6b70586717be499e8c87456721e1d, type: 2}
   - {fileID: 100000, guid: 5372cd73788a47d4ab523697ce58de47, type: 2}
   - {fileID: 100000, guid: 95d31cf1477ead24f855811870806a20, type: 2}
   - {fileID: 100000, guid: 3840e00afeb1ecc46b114ca1f054f174, type: 2}
-  m_nSkyObjNum: 03000000030000000300000003000000
+  m_nSkyObjNum: 05000000030000000300000005000000
 --- !u!1 &1515219934
 GameObject:
   m_ObjectHideFlags: 0

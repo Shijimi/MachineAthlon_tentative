@@ -7,7 +7,7 @@ public class GameSystem : MonoBehaviour
     private float fStartTime,fNowTime;
     private string strNowStatus,strPreStatus;
     private const int STAGE_NUM = 3;
-    private const int STAGE_TIME = 20;
+    private const float STAGE_TIME = 20;
     private int m_nNowStageNum = 0;
 
     void Start()
@@ -131,5 +131,5 @@ public class GameSystem : MonoBehaviour
     public int GetStageNum() { return STAGE_NUM; }
 
     //1ステージの時間を返す
-    public int GetStageTime() { return STAGE_TIME; }
+    public float GetStageTime() { return STAGE_TIME; }
 }
