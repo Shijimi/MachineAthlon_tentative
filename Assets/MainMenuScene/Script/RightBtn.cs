@@ -1,17 +1,17 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Cancel : MonoBehaviour
+public class RightBtn : MonoBehaviour
 {
 
     //Vector3 m_vInitPos;			//	初期座標.
-    //static bool m_bLeftSetFlg;	//	セットフラグ.
+    //static bool m_bRightSetFlg;	//	セットフラグ.
     //public Vector3 m_vSetPos;	//	画面内座標.
 
     void Start()
     {
         ////	最初はセットしない.
-        //m_bLeftSetFlg = false;
+        //m_bRightSetFlg = false;
 
         ////	画面外座標を設定.
         //m_vInitPos = new Vector3(0.0f, -0.1f, 0.0f);
@@ -19,7 +19,7 @@ public class Cancel : MonoBehaviour
 
     void Update()
     {
-        //if (m_bLeftSetFlg)
+        //if (m_bRightSetFlg)
         //    //	レフトボタンを画面内へ移動.
         //    transform.position = m_vSetPos;
         //else
@@ -44,40 +44,36 @@ public class Cancel : MonoBehaviour
         //        if (game_object == gameObject)
         //        {
         //            //	ボタンを画面外へ移動.
-        //            Cancel.ReleaseCanBtn();
         //            RightBtn.ReleaseRightBtn();
         //            LeftBtn.ReleaseLeftBtn();
+        //            //Cancel.ReleaseCanBtn();
 
-        //            //	チュートリアル画面を初期化.
-        //            Tutorial_1.Init();
-
-        //            //	チュートリアルボタンを初期化.
-        //            TutorialBtn.Init();
+        //            //	フェードアウト開始.
+        //            Tutorial_1.FadeOut();
         //        }
         //    }
         //}
 
-        //クリックされた場合
         if (gameObject.GetComponent<Button>().GetClick())
         {
-            //入力目的を"メイン"に変更
-            gameObject.GetComponent<Button>().SetTarget("main");
+            //入力目的を"なし"に設定
+            gameObject.GetComponent<Button>().SetTarget("no");
 
-            //チュートリアル終了
-            GameObject.Find("Tutorial").GetComponent<Tutorial>().Set(false);
+            //次のページ
+            GameObject.Find("Tutorial").GetComponent<Tutorial>().Page(1);
         }
     }
 
     ////	レフトボタンを画面内に表示する.
-    //public static void SetCanBtn()
+    //public static void SetRightBtn()
     //{
     //    //	セットする.
-    //    m_bLeftSetFlg = true;
+    //    m_bRightSetFlg = true;
     //}
 
     ////	レフトボタンを画面外に表示する.
-    //public static void ReleaseCanBtn()
+    //public static void ReleaseRightBtn()
     //{
-    //    m_bLeftSetFlg = false;
+    //    m_bRightSetFlg = false;
     //}
 }
