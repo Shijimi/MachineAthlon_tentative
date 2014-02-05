@@ -50,6 +50,9 @@ public class TutorialBtn : MonoBehaviour
         //クリックされた場合
         if (gameObject.GetComponent<Button>().GetClick())
         {
+            //タップ音を再生
+            audio.PlayOneShot(gameObject.GetComponent<AudioSource>().clip);
+
             //	クリックされたらレンダラーをOnに変更.
             renderer.material.mainTexture = Tutorial_On;
 

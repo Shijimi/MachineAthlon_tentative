@@ -53,6 +53,9 @@ public class StartBtn : MonoBehaviour {
 
         if(gameObject.GetComponent<Button>().GetClick())
         {
+            //タップ音を再生
+            audio.PlayOneShot(gameObject.GetComponent<AudioSource>().clip);
+
             //	クリックされたらレンダラーをOnに変更.
             renderer.material.mainTexture = Start_On;
 

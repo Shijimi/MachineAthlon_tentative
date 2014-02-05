@@ -56,6 +56,9 @@ public class LeftBtn : MonoBehaviour
 
         if (gameObject.GetComponent<Button>().GetClick())
         {
+            //タップ音を再生
+            audio.PlayOneShot(gameObject.GetComponent<AudioSource>().clip);
+
             //入力目的を"なし"に設定
             gameObject.GetComponent<Button>().SetTarget("no");
 

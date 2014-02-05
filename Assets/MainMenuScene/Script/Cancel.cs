@@ -60,6 +60,9 @@ public class Cancel : MonoBehaviour
         //クリックされた場合
         if (gameObject.GetComponent<Button>().GetClick())
         {
+            //タップ音を再生
+            audio.PlayOneShot(gameObject.GetComponent<AudioSource>().clip);
+
             //入力目的を"メイン"に変更
             gameObject.GetComponent<Button>().SetTarget("main");
 
