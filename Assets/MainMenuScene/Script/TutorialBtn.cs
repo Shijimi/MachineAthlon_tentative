@@ -63,7 +63,7 @@ public class TutorialBtn : MonoBehaviour
             m_bInitFlg = false;
 
             //入力目的を"チュートリアル"に変更.
-            gameObject.GetComponent<Button>().SetTarget("tutorial");
+            gameObject.GetComponent<Button>().SetTarget("tutorial_scroll");
 
             //チュートリアル開始
             GameObject.Find("Tutorial").GetComponent<Tutorial>().Set(true);

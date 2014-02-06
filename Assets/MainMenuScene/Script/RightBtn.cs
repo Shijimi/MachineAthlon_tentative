@@ -60,7 +60,7 @@ public class RightBtn : MonoBehaviour
             audio.PlayOneShot(gameObject.GetComponent<AudioSource>().clip);
 
             //入力目的を"なし"に設定
-            gameObject.GetComponent<Button>().SetTarget("no");
+            gameObject.GetComponent<Button>().SetTarget("tutorial_scroll");
 
             //次のページ
             GameObject.Find("Tutorial").GetComponent<Tutorial>().Page(1);
