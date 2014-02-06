@@ -22,39 +22,57 @@ public class Return : MonoBehaviour {
 	
 	void	Update()
 	{
-		if (Input.GetKeyDown(KeyCode.Mouse0))
-		{
-			//	光線が当たった時の情報を取得.
-			RaycastHit ray_hit;
-			//	光線(カメラのヒット情報を取得).
-			Ray	ray	=	Camera.main.ScreenPointToRay(Input.mousePosition);
+        //if (Input.GetKeyDown(KeyCode.Mouse0))
+        //{
+        //    //	光線が当たった時の情報を取得.
+        //    RaycastHit ray_hit;
+        //    //	光線(カメラのヒット情報を取得).
+        //    Ray	ray	=	Camera.main.ScreenPointToRay(Input.mousePosition);
 			
-			//	タッチ情報を処理.
-			if( Physics.Raycast(ray, out ray_hit, 100 ) )
-			{
-				//	光線がヒットしたオブジェクトを取得
-			    GameObject	game_object	=	ray_hit.collider.gameObject;
+        //    //	タッチ情報を処理.
+        //    if( Physics.Raycast(ray, out ray_hit, 100 ) )
+        //    {
+        //        //	光線がヒットしたオブジェクトを取得
+        //        GameObject	game_object	=	ray_hit.collider.gameObject;
 	
-				//	ヒットしたオブジェクトがスタートボタンか？.
-				if( game_object == gameObject )
-				{
-					//	クリックされたらレンダラーをOnに変更.
-					renderer.material.mainTexture	=	Return_On;
+        //        //	ヒットしたオブジェクトがスタートボタンか？.
+        //        if( game_object == gameObject )
+        //        {
+        //            //	クリックされたらレンダラーをOnに変更.
+        //            renderer.material.mainTexture	=	Return_On;
 					
-					//	フェード開始.
-					Fade.FadeIn();
-					m_fadeFlg	=	true;
-				}
-			}
-		}
-		
+        //            //	フェード開始.
+        //            Fade.FadeIn();
+        //            m_fadeFlg	=	true;
+        //        }
+        //    }
+        //}
+
+        if (gameObject.GetComponent<Button>().GetClick())
+        {
+            //タップ音を再生
+            audio.PlayOneShot(gameObject.GetComponent<AudioSource>().clip);
+
+            //	クリックされたらレンダラーをOnに変更.
+            renderer.material.mainTexture = Return_On;
+
+            //	フェード開始.
+            Fade.FadeIn();
+            m_fadeFlg = true;
+        }
+
 		//	フェードフラグが立っていたらフェードタイムを減らす.
 		if( m_fadeFlg )
 			m_fadeTime--;
 		
 		//	フェードが終了したらシーン移動.
-		if( m_fadeTime <= 0 )
-	           //	タイトルシーンを開始する.
-     	       Application.LoadLevel("MainMenuScene");
+        if (m_fadeTime <= 0)
+        {
+            //入力目的を"メイン"に設定
+            gameObject.GetComponent<Button>().SetTarget("main");
+
+            //	タイトルシーンを開始する.
+            Application.LoadLevel("MainMenuScene");
+        }
 	}
 }
