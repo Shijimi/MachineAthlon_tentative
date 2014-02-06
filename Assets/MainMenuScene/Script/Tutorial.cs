@@ -103,7 +103,7 @@ public class Tutorial : MonoBehaviour
     }
 
     //ページめくり
-    public void Page(int _page)
+    public bool Page(int _page)
     {
         //スクロール中でない
         if (!m_bScroll)
@@ -115,13 +115,17 @@ public class Tutorial : MonoBehaviour
             {
                 m_nPrePage = m_nPage;
                 m_nPage += _page;            //ページを設定
+                return true;
             }
             //ページめくりに失敗した場合
             else
             {
                 //入力目的を"チュートリアル"に設定
                 m_cButtonManager.GetComponent<ButtonManager>().SetTarget("tutorial");
+                return false;
             }
         }
+
+        return false;
     }
 }
