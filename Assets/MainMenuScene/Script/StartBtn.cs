@@ -69,8 +69,13 @@ public class StartBtn : MonoBehaviour {
 			m_fadeTime--;
 		
 		//	フェードが終了したらシーン移動.
-		if( m_fadeTime <= 0 )
-	           //アクションシーンを開始する.
-     	       Application.LoadLevel("ActionScene");
+        if (m_fadeTime <= 0)
+        {
+            //アクションシーンを開始する.
+            Application.LoadLevel("ActionScene");
+
+            //入力目的を"リザルトに変更"
+            gameObject.GetComponent<Button>().SetTarget("result");
+        }
 	}
 }
