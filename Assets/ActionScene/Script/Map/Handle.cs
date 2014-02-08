@@ -17,6 +17,8 @@ public class Handle : MonoBehaviour
         m_cGameSystem = GameObject.Find("GameSystem");
         //プレイヤーのオブジェクトを取得する.
         m_cPlayer = GameObject.Find("Player");
+		//	レンダラーを設定.
+		gameObject.renderer.material.mainTexture = m_cLand;
     }
 
     // Update is called once per frame

@@ -4,12 +4,13 @@
 SceneSettings:
   m_ObjectHideFlags: 0
   m_PVSData: 
+  m_QueryMode: 1
   m_PVSObjectsArray: []
   m_PVSPortalsArray: []
   m_OcclusionBakeSettings:
-    smallestOccluder: 5
-    smallestHole: .25
-    backfaceThreshold: 100
+    viewCellSize: 1
+    bakeMode: 2
+    memoryUsage: 10485760
 --- !u!104 &2
 RenderSettings:
   m_Fog: 0
@@ -22,7 +23,6 @@ RenderSettings:
   m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: .5
   m_FlareStrength: 1
-  m_FlareFadeSpeed: 3
   m_HaloTexture: {fileID: 0}
   m_SpotCookie: {fileID: 0}
   m_ObjectHideFlags: 0
@@ -128,9 +128,6 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_SortingLayerID: 0
 --- !u!64 &169832231
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -264,9 +261,6 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_SortingLayerID: 0
 --- !u!64 &346473452
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -435,9 +429,6 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_SortingLayerID: 0
 --- !u!64 &643497664
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -557,9 +548,6 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_SortingLayerID: 0
 --- !u!64 &944617349
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -639,9 +627,6 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_SortingLayerID: 0
 --- !u!64 &1008342224
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -725,9 +710,6 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_SortingLayerID: 0
 --- !u!64 &1107415035
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -879,7 +861,6 @@ Camera:
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_HDR: 0
-  m_OcclusionCulling: 1
 --- !u!4 &1306444340
 Transform:
   m_ObjectHideFlags: 0
@@ -918,6 +899,7 @@ GameObject:
   - 65: {fileID: 1314411955}
   - 54: {fileID: 1314411959}
   - 111: {fileID: 1314411960}
+  - 114: {fileID: 1314411961}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -943,9 +925,6 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_SortingLayerID: 0
 --- !u!65 &1314411955
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1031,6 +1010,30 @@ Animation:
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 0
+  m_UserAABB:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+--- !u!114 &1314411961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1314411953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 415b42e31b22a9540a804e859ed7857a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_cBreakObj:
+  - {fileID: 100000, guid: 8acdb3e8128499b468ad9d286c820393, type: 2}
+  - {fileID: 100000, guid: 47d20dcf04cd697408e909fb3784d499, type: 2}
+  - {fileID: 100000, guid: 24aac2bcd16fdf14b8c4a0ede5daa0a3, type: 2}
+  - {fileID: 100000, guid: 0d98a6ffedf898449bd563dc62d8020f, type: 2}
+  - {fileID: 100000, guid: 5340c8bd0c20ad54589957e0c5bf504a, type: 2}
+  - {fileID: 100000, guid: 0f94bb35f3bec6d48b0ebbe950e85f10, type: 2}
+  - {fileID: 100000, guid: a9b028d6d21b6ba4599a53e43c579ac9, type: 2}
+  - {fileID: 100000, guid: 756007fc3dcc4a445b624da200ec7da4, type: 2}
+  - {fileID: 100000, guid: abe3b78944d982343b4e967cb21a3fb8, type: 2}
 --- !u!1 &1398842890
 GameObject:
   m_ObjectHideFlags: 0
@@ -1153,9 +1156,6 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_SortingLayerID: 0
 --- !u!64 &1515219938
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1214,9 +1214,6 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_SortingLayerID: 0
 --- !u!64 &1758861930
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1352,9 +1349,6 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_SortingLayerID: 0
 --- !u!64 &1894024905
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1426,9 +1420,6 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_SortingLayerID: 0
 --- !u!64 &1911609679
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1506,6 +1497,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 2125548330}
   - 114: {fileID: 2125548332}
+  - 114: {fileID: 2125548331}
   m_Layer: 0
   m_Name: GameSystem
   m_TagString: GameSytem
@@ -1524,6 +1516,27 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!114 &2125548331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2125548329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 415b42e31b22a9540a804e859ed7857a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_cBreakObj:
+  - {fileID: 100000, guid: abe3b78944d982343b4e967cb21a3fb8, type: 2}
+  - {fileID: 100000, guid: abe3b78944d982343b4e967cb21a3fb8, type: 2}
+  - {fileID: 100000, guid: abe3b78944d982343b4e967cb21a3fb8, type: 2}
+  - {fileID: 100000, guid: abe3b78944d982343b4e967cb21a3fb8, type: 2}
+  - {fileID: 100000, guid: abe3b78944d982343b4e967cb21a3fb8, type: 2}
+  - {fileID: 100000, guid: abe3b78944d982343b4e967cb21a3fb8, type: 2}
+  - {fileID: 100000, guid: a9b028d6d21b6ba4599a53e43c579ac9, type: 2}
+  - {fileID: 100000, guid: 756007fc3dcc4a445b624da200ec7da4, type: 2}
+  - {fileID: 100000, guid: abe3b78944d982343b4e967cb21a3fb8, type: 2}
 --- !u!114 &2125548332
 MonoBehaviour:
   m_ObjectHideFlags: 0

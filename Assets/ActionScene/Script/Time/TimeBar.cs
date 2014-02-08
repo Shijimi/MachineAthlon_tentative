@@ -22,15 +22,7 @@ public class TimeBar : MonoBehaviour {
 	}
 	
 	void Update()
-	{
-		if(Input.GetKeyDown(KeyCode.UpArrow)){
-			m_offset[0]	+=	m_fSpeed;
-		}
-		
-		if(Input.GetKeyDown(KeyCode.DownArrow)){
-			m_offset[0]	-=	m_fSpeed;
-		}
-		
+	{		
 		//	offsetを適用.
 		m_material.SetTextureOffset("_MainTex", m_offset);
 	}

@@ -34,7 +34,8 @@ public class BackGround : MonoBehaviour {
 	// Update is called once per frame.
 	void Update()
     {
-        vMove = new Vector2(0, -(cPlayer.GetComponent<Player>().GetSpeed())*0.0085f);
+		if( cGameSystem.GetComponent<GameSystem>().GetStatus() != "LAND_START" )
+	        vMove = new Vector2(0, -(cPlayer.GetComponent<Player>().GetSpeed())*0.0085f);
 
         //移動ベクトルを座標に加算.
         vPos += vMove;
@@ -45,35 +46,11 @@ public class BackGround : MonoBehaviour {
         //ステージのステータスから切り替えを行う.
         switch(cGameSystem.GetComponent<GameSystem>().GetStatus())
         {
-            //陸ステージ開始.
-            case "LAND_START":
-
-            break;
-
-            //陸ステージ中の処理.
-            case "LAND":
-            break;
-
-            //陸ステージの終了.
-            case "LAND_END":
-
-            break;
-
             //海ステージ開始.
             case "SEA_START":
 
                 //海のテクスチャに変更.
 				renderer.material.mainTexture	=	m_SeeTex;
-
-            break;
-
-            //海ステージ中の処理.
-            case "SEA":
-            break;
-
-            //海ステージの終了.
-            case "SEA_END":
-
 
             break;
 
@@ -84,16 +61,6 @@ public class BackGround : MonoBehaviour {
 				renderer.material.mainTexture	=	m_SkyTex;
 
             break;
-
-            //空ステージ中の処理.
-            case "SKY":
-            break;
-
-            //空ステージの終了.
-            case "SKY_END":
-
-            break;
-            
         }
     }
 }
