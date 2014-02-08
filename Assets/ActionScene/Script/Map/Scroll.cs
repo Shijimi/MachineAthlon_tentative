@@ -16,7 +16,7 @@ public class Scroll : MonoBehaviour
     private GameObject cPlayer;
 
 	//オブジェクトが消滅するときのZ座標.
-	private const float OBJ_REMOVE_POS_Z = -60;
+	private const float OBJ_REMOVE_POS_Z = -110;
 
 	// Use this for initialization
 	void Start ()

@@ -42,6 +42,9 @@ public class GameSystem : MonoBehaviour
 			return;
 		}
 
+        fNowTime = Time.time - fStartTime;
+        TimeBar.TimeSet(fNowTime * 0.00833f);
+
         if (fNowTime < STAGE_TIME)
         {			
             if (strPreStatus == "LAND_START")
@@ -61,6 +64,9 @@ public class GameSystem : MonoBehaviour
             if(strPreStatus == "LAND")
             {
                 strNowStatus = "LAND_END";
+
+                //フェードSEを再生
+                audio.PlayOneShot(gameObject.GetComponent<AudioSource>().clip);
             }
             else if (strPreStatus == "LAND_END")
             {
@@ -85,6 +91,9 @@ public class GameSystem : MonoBehaviour
             if (strPreStatus == "SEA")
             {
                 strNowStatus = "SEA_END";
+
+                //フェードSEを再生
+                audio.PlayOneShot(gameObject.GetComponent<AudioSource>().clip);
             }
             else if (strPreStatus == "SEA_END")
             {
@@ -101,34 +110,18 @@ public class GameSystem : MonoBehaviour
             if (strPreStatus == "SKY")
             {
                 strNowStatus = "SKY_END";
+
+                //フェードSEを再生
+                audio.PlayOneShot(gameObject.GetComponent<AudioSource>().clip);
             }
             else if (strPreStatus == "SKY_END")
             {
 				//	終了エフェクトを生成.
 				GetComponent<EffectCreator>().Create("FINISH");
-				
+
                 strNowStatus = "RESULT";
             }
         }
-    }
-
-    void OnGUI()
-    {
-        //経過時間を算出.
-        fNowTime = Time.time - fStartTime;
-		
-		//	残り時間を取得.
-		int	time	=	60 - (int)fNowTime;
-		
-		Number.NumSet( (60 - (int)fNowTime) );
-
-		TimeBar.TimeSet( fNowTime * 0.00833f );
-		
-		//	一桁目のタイムを反映.
-		TimeNumber1.TimeSet1(time % 10 * 0.1f);
-
-		//	二桁目のタイムを反映.
-		TimeNumber2.TimeSet2(time / 10 * 0.1f);
     }
 
     //時間を返す.

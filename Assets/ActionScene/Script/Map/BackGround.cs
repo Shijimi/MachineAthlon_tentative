@@ -35,7 +35,7 @@ public class BackGround : MonoBehaviour {
 	void Update()
     {
 		if( cGameSystem.GetComponent<GameSystem>().GetStatus() != "LAND_START" )
-	        vMove = new Vector2(0, -(cPlayer.GetComponent<Player>().GetSpeed())*0.0085f);
+	        vMove = new Vector2(0, -(cPlayer.GetComponent<Player>().GetSpeed())*0.005f);
 
         //移動ベクトルを座標に加算.
         vPos += vMove;

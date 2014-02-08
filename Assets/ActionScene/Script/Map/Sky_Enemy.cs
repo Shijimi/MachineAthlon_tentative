@@ -13,7 +13,9 @@ public class Sky_Enemy : MonoBehaviour
     private int m_nNowState;
     private GameObject m_cPlayer;
 
-    private static float ATTACK_DISTANCE = 8.0f;
+    private const float NORMAL_SCALE = 1.0f;            //通常時の移動補正値
+    private const float ATTACK_SCALE = 2.5f;            //攻撃中の移動補正値
+    private const float ATTACK_DISTANCE = 5.0f;         //攻撃に入るまでの距離
 
     // Use this for initialization
     void Start()
@@ -27,13 +29,13 @@ public class Sky_Enemy : MonoBehaviour
     {
         //プレイヤーまでのベクトルを求める
         Vector3 vDistance = m_cPlayer.transform.position - gameObject.transform.position;
-        Vector3 vMove = Vector3.Normalize(vDistance) * 0.5f;
+        Vector3 vMove = Vector3.Normalize(vDistance) * NORMAL_SCALE;
 
         //攻撃範囲内に入った場合
         if (Mathf.Abs(vDistance.z) < ATTACK_DISTANCE)
         {
             m_nNowState = (int)STATE.ATTACK;        //ステートを攻撃に変更
-            vMove *= 3.0f;                          //追尾速度を上げる
+            vMove *= ATTACK_SCALE;                          //追尾速度を上げる
         }
 
         //通常時

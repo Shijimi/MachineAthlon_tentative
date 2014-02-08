@@ -14,6 +14,7 @@ GameObject:
   - 65: {fileID: 6500000}
   - 54: {fileID: 5400000}
   - 114: {fileID: 11400002}
+  - 114: {fileID: 11400004}
   m_Layer: 0
   m_Name: Sky_Speed_Up.prefab
   m_TagString: item_speed
@@ -110,6 +111,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a4345195ccf220428313811f4b8af1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11400004
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37a465d4039b1f646bbc20e3d378392d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_vPos: {x: 0, y: 0}
+  m_vSize: {x: 100, y: 100}
+  m_vScale: {x: 1, y: 1}
+  m_bPosCenterX: 0
+  m_bPosCenterY: 0
+  m_bSizeMaxX: 0
+  m_bSizeMaxY: 0
+  m_bPosKeep: 1
+  m_cBaseObj: {fileID: 0}
+  m_fHeight: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
