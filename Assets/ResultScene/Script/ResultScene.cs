@@ -5,6 +5,9 @@ public class ResultScene : MonoBehaviour
 {
     [SerializeField]
     private GameObject[] m_cBackGrounds = new GameObject[BG_NUM];
+    [SerializeField]
+    private GameObject[] m_cScoreBoards = new GameObject[BG_NUM];
+
     private const int BG_NUM = 4;
     private const float FADE_TIME = 2.0f;
     private float m_fStartTime = 0.0f;
@@ -30,9 +33,9 @@ public class ResultScene : MonoBehaviour
             }
         }
 
-        if (fTime / FADE_TIME > (float)BG_NUM - 1.0f)
-        {
-            GameObject.Find("ButtonManager").GetComponent<ButtonManager>().SetTarget("result_end");
-        }
+        //if (fTime / FADE_TIME > (float)BG_NUM - 1.0f)
+        //{
+        //    GameObject.Find("ButtonManager").GetComponent<ButtonManager>().SetTarget("result_end");
+        //}
 	}
 }

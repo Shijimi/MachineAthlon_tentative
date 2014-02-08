@@ -1103,6 +1103,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1063451177}
   - 114: {fileID: 1063451176}
+  - 114: {fileID: 1063451178}
   m_Layer: 0
   m_Name: DataManager
   m_TagString: Untagged
@@ -1133,6 +1134,19 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!114 &1063451178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: ce9f6383092b850468393819e5d20a4f,
+    type: 2}
+  m_PrefabInternal: {fileID: 1552587918}
+  m_GameObject: {fileID: 1063451175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46df380729644644ca7b01833210c729, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_cScoreBoardNum: {fileID: 100000, guid: b82893f86bcf36542adb7311e4b8195a, type: 2}
 --- !u!1 &1082338939
 GameObject:
   m_ObjectHideFlags: 0
@@ -1161,7 +1175,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: .243000001
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Priority: 128
   DopplerLevel: 1
