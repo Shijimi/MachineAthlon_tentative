@@ -72,7 +72,7 @@ public class DataManager: SingletonMonoBehaviour<DataManager>
     }
 
     //データの設定
-    public void SetData(string _tag, float _data)
+    public void SetData(string _tag, int _data)
     {
         //同名のタグがあれば上書きを行う
         foreach (DataTable cTable in m_cTable)
@@ -89,7 +89,7 @@ public class DataManager: SingletonMonoBehaviour<DataManager>
     }
 
     //データの取得
-    public float GetData(string _tag)
+    public int GetData(string _tag)
     {
         //同名のタグがあれば上書きを行う
         foreach (DataTable cTable in m_cTable)
@@ -101,23 +101,23 @@ public class DataManager: SingletonMonoBehaviour<DataManager>
         }
 
         //データなし
-        return 0.0f;
+        return 0;
     }
 }
 
 public class DataTable
 {
     private string m_strTag;
-    private float m_fValue;
+    private int m_nValue;
 
     //コンストラクタ
-    public DataTable(string _tag, float _value)
+    public DataTable(string _tag, int _value)
     {
         m_strTag = _tag;
-        m_fValue = _value;
+        m_nValue = _value;
     }
 
     public string GetTag() { return m_strTag; }
-    public float GetValue() { return m_fValue; }
-    public void SetValue(float _value) { m_fValue = _value; }
+    public int GetValue() { return m_nValue; }
+    public void SetValue(int _value) { m_nValue = _value; }
 }
