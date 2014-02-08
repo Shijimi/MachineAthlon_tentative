@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9de47e6609e33384194c7c2f018aa695, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_strTag: float_total_score
+  m_strTag: total_score
 --- !u!1 &33840389
 GameObject:
   m_ObjectHideFlags: 0
@@ -239,7 +239,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9de47e6609e33384194c7c2f018aa695, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_strTag: float_land_score
+  m_strTag: land_score
 --- !u!114 &343870936
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -409,7 +409,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9de47e6609e33384194c7c2f018aa695, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_strTag: float_sky_score
+  m_strTag: sky_score
 --- !u!1 &876534207
 GameObject:
   m_ObjectHideFlags: 0
@@ -1127,11 +1127,6 @@ MonoBehaviour:
   - {fileID: 1008368467}
   - {fileID: 2037378898}
   - {fileID: 970766135}
-  m_cScoreBoards:
-  - {fileID: 343870932}
-  - {fileID: 2074307296}
-  - {fileID: 782842005}
-  - {fileID: 11360520}
 --- !u!4 &1059855707
 Transform:
   m_ObjectHideFlags: 0
@@ -1796,4 +1791,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9de47e6609e33384194c7c2f018aa695, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_strTag: float_sea_score
+  m_strTag: sea_score
