@@ -5,8 +5,6 @@ public class ResultScene : MonoBehaviour
 {
     [SerializeField]
     private GameObject[] m_cBackGrounds = new GameObject[BG_NUM];
-    [SerializeField]
-    private GameObject[] m_cScoreBoards = new GameObject[BG_NUM];
 
     private const int BG_NUM = 4;
     private const float FADE_TIME = 2.0f;
