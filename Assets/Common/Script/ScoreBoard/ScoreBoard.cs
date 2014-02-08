@@ -13,8 +13,6 @@ public class ScoreBoard : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
-	    m_nDigit = 0;
-        m_bCreated = false;
 	}
 	
 	// Update is called once per frame
