@@ -15,6 +15,6 @@ public class Sky_Cloud : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-        gameObject.transform.position -= new Vector3(0.0f, -1.0f, m_fSpeed);
+        gameObject.transform.position -= new Vector3(0.0f, -0.5f, m_fSpeed);
 	}
 }

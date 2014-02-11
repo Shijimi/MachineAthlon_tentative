@@ -1,0 +1,21 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/ActionScene/Script/Map/ObjCreator.cs">
+    <Files>
+      <File FileName="Assets/ActionScene/Script/Map/Sky_Cloud.cs" Line="1" Column="1" />
+      <File FileName="Assets/ActionScene/Script/Effect/EffectBlast.cs" Line="1" Column="1" />
+      <File FileName="Assets/ActionScene/Script/Player/Player.cs" Line="1" Column="1" />
+      <File FileName="Assets/ActionScene/Script/GameSystem/GameSystem.cs" Line="1" Column="1" />
+      <File FileName="Assets/ActionScene/Script/Map/ObjCreator.cs" Line="96" Column="26" />
+      <File FileName="Assets/ActionScene/Script/Map/Scroll.cs" Line="1" Column="1" />
+      <File FileName="Assets/ActionScene/Script/Map/Fade.cs" Line="1" Column="1" />
+      <File FileName="Assets/ActionScene/Script/Map/EffectCreator.cs" Line="1" Column="1" />
+      <File FileName="Assets/ActionScene/Script/Map/Handle.cs" Line="1" Column="1" />
+      <File FileName="Assets/MainMenuScene/Script/Tutorial.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

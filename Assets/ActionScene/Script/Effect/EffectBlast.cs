@@ -4,7 +4,6 @@ using System.Collections.Generic;
 
 public class EffectBlast : MonoBehaviour {
 	
-	public	int		m_iEffectTime;	//	エフェクト持続時間.
 	public	float	m_fScaleAdd;
 	
 	float	m_fScale;
@@ -16,11 +15,11 @@ public class EffectBlast : MonoBehaviour {
 	{
 		m_fScale	=	0.0f;
 		
-		m_vMove.Add( new Vector2( -1.0f, -1.0f ) );
-		m_vMove.Add( new Vector2( 2.0f, 2.0f ) );
-		m_vMove.Add( new Vector2( 0.0f, -4.0f ) );
-		m_vMove.Add( new Vector2( -4.0f, 4.0f ) );
-		m_vMove.Add( new Vector2( 3.0f, -2.0f ) );
+		m_vMove.Add( new Vector2( -2.0f, -2.0f ) );
+		m_vMove.Add( new Vector2( 4.0f, 4.0f ) );
+		m_vMove.Add( new Vector2( 0.0f, -8.0f ) );
+		m_vMove.Add( new Vector2( -8.0f, 8.0f ) );
+		m_vMove.Add( new Vector2( 6.0f, -4.0f ) );
 		
 		transform.position	=	new Vector3( transform.position.x + m_vMove[m_listNum].x,
 											 transform.position.y,
@@ -31,12 +30,11 @@ public class EffectBlast : MonoBehaviour {
 	
 	void Update ()
 	{
-		m_iTimeCnt++;
 		m_fScale += m_fScaleAdd;
 		
 		transform.localScale	=	new Vector3( m_fScale, 1.0f, m_fScale );
 		
-		if( m_fScale >= 1.0f )
+		if( m_fScale >= 1.6f )
 		{
 			m_fScale	=	0.0f;
 			transform.position	=	new Vector3( transform.position.x + m_vMove[m_listNum].x,

@@ -30,10 +30,5 @@ public class ResultScene : MonoBehaviour
                 m_cBackGrounds[cnt].renderer.material.color = new Color(1.0f, 1.0f, 1.0f, 1.0f - ((fTime / FADE_TIME) - (float)cnt));
             }
         }
-
-        //if (fTime / FADE_TIME > (float)BG_NUM - 1.0f)
-        //{
-        //    GameObject.Find("ButtonManager").GetComponent<ButtonManager>().SetTarget("result_end");
-        //}
 	}
 }

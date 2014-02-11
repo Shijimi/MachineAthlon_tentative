@@ -114,8 +114,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37a465d4039b1f646bbc20e3d378392d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_vPos: {x: -100, y: 850}
-  m_vSize: {x: 150, y: 150}
+  m_vPos: {x: -100, y: 1100}
+  m_vSize: {x: 300, y: 300}
   m_vScale: {x: 1.5, y: 1.5}
   m_bPosCenterX: 0
   m_bPosCenterY: 0
@@ -208,7 +208,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_vPos: {x: 50, y: 400}
-  m_vSize: {x: 150, y: 150}
+  m_vSize: {x: 300, y: 300}
   m_vScale: {x: 1, y: 1}
   m_bPosCenterX: 0
   m_bPosCenterY: 0
@@ -376,8 +376,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37a465d4039b1f646bbc20e3d378392d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_vPos: {x: 50, y: 700}
-  m_vSize: {x: 150, y: 150}
+  m_vPos: {x: 50, y: 900}
+  m_vSize: {x: 300, y: 300}
   m_vScale: {x: 1, y: 1}
   m_bPosCenterX: 0
   m_bPosCenterY: 0
@@ -492,8 +492,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37a465d4039b1f646bbc20e3d378392d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_vPos: {x: 180, y: 200}
-  m_vSize: {x: 1360, y: 459}
+  m_vPos: {x: 180, y: 60}
+  m_vSize: {x: 2720, y: 918}
   m_vScale: {x: .5, y: .5}
   m_bPosCenterX: 1
   m_bPosCenterY: 0
@@ -600,8 +600,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37a465d4039b1f646bbc20e3d378392d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_vPos: {x: 10, y: 1100}
-  m_vSize: {x: 1234, y: 437}
+  m_vPos: {x: 10, y: 1700}
+  m_vSize: {x: 2468, y: 874}
   m_vScale: {x: .300000012, y: .300000012}
   m_bPosCenterX: 0
   m_bPosCenterY: 0
@@ -733,7 +733,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: e5cf20b3df6f7324ca3a835e04127bff, type: 2}
+  - {fileID: 2100000, guid: 5e9112a182ac84dee8e2ebc21e2fd79c, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -1230,8 +1230,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7c0bf38ebecb2418062dca0ab30085, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_fViewHeight: 1280
-  m_fViewWidth: 720
+  m_fViewHeight: 2048
+  m_fViewWidth: 1536
 --- !u!1 &1714282649
 GameObject:
   m_ObjectHideFlags: 0
@@ -1317,8 +1317,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37a465d4039b1f646bbc20e3d378392d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_vPos: {x: 360, y: 1100}
-  m_vSize: {x: 1234, y: 437}
+  m_vPos: {x: 800, y: 1700}
+  m_vSize: {x: 2468, y: 874}
   m_vScale: {x: .300000012, y: .300000012}
   m_bPosCenterX: 0
   m_bPosCenterY: 0
@@ -1758,8 +1758,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37a465d4039b1f646bbc20e3d378392d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_vPos: {x: 50, y: 550}
-  m_vSize: {x: 150, y: 150}
+  m_vPos: {x: 50, y: 650}
+  m_vSize: {x: 300, y: 300}
   m_vScale: {x: 1, y: 1}
   m_bPosCenterX: 0
   m_bPosCenterY: 0

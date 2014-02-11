@@ -114,8 +114,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37a465d4039b1f646bbc20e3d378392d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_vPos: {x: 350, y: 0}
-  m_vSize: {x: 100, y: 100}
+  m_vPos: {x: 700, y: 0}
+  m_vSize: {x: 200, y: 200}
   m_vScale: {x: 1, y: 1}
   m_bPosCenterX: 0
   m_bPosCenterY: 0
@@ -247,7 +247,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_vPos: {x: 0, y: 0}
-  m_vSize: {x: 720, y: 1280}
+  m_vSize: {x: 1536, y: 2048}
   m_vScale: {x: 1, y: 1}
   m_bPosCenterX: 1
   m_bPosCenterY: 1
@@ -575,8 +575,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7c0bf38ebecb2418062dca0ab30085, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_fViewHeight: 1280
-  m_fViewWidth: 720
+  m_fViewHeight: 2048
+  m_fViewWidth: 1536
 --- !u!1 &1314411953
 GameObject:
   m_ObjectHideFlags: 0
@@ -801,8 +801,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37a465d4039b1f646bbc20e3d378392d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_vPos: {x: 0, y: 950}
-  m_vSize: {x: 120, y: 120}
+  m_vPos: {x: 0, y: 1500}
+  m_vSize: {x: 240, y: 240}
   m_vScale: {x: 1, y: 1}
   m_bPosCenterX: 1
   m_bPosCenterY: 0
@@ -852,18 +852,18 @@ MonoBehaviour:
   m_cLandObj:
   - {fileID: 100000, guid: f5d090140174473428e865bd387ed9ad, type: 2}
   - {fileID: 100000, guid: af8b8d5b6718c434b999801fdfe537ab, type: 2}
-  m_nLandObjNum: 0500000005000000
+  m_nLandObjNum: 0700000005000000
   m_cSeaObj:
   - {fileID: 100000, guid: 5d781ede6bad0434fb9b39c4e075b2cf, type: 2}
   - {fileID: 100000, guid: 8b0b643d121fda541b1ce364e06536f2, type: 2}
   - {fileID: 100000, guid: 89633af5a498fbd41baadc6ffbb3a7aa, type: 2}
-  m_nSeaObjNum: 050000000300000002000000
+  m_nSeaObjNum: 070000000300000002000000
   m_cSkyObj:
   - {fileID: 100000, guid: 92e6b70586717be499e8c87456721e1d, type: 2}
   - {fileID: 100000, guid: 5372cd73788a47d4ab523697ce58de47, type: 2}
   - {fileID: 100000, guid: 95d31cf1477ead24f855811870806a20, type: 2}
   - {fileID: 100000, guid: 3840e00afeb1ecc46b114ca1f054f174, type: 2}
-  m_nSkyObjNum: 05000000030000000300000005000000
+  m_nSkyObjNum: 07000000030000000300000005000000
 --- !u!1 &1515219934
 GameObject:
   m_ObjectHideFlags: 0
@@ -905,8 +905,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37a465d4039b1f646bbc20e3d378392d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_vPos: {x: 5, y: 12}
-  m_vSize: {x: 794, y: 95}
+  m_vPos: {x: 5, y: 62}
+  m_vSize: {x: 1600, y: 200}
   m_vScale: {x: .5, y: .5}
   m_bPosCenterX: 0
   m_bPosCenterY: 0
@@ -1189,8 +1189,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37a465d4039b1f646bbc20e3d378392d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_vPos: {x: 35, y: 23}
-  m_vSize: {x: 794, y: 95}
+  m_vPos: {x: 80, y: 84}
+  m_vSize: {x: 1600, y: 200}
   m_vScale: {x: .460000008, y: .300000012}
   m_bPosCenterX: 0
   m_bPosCenterY: 0
@@ -1338,8 +1338,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37a465d4039b1f646bbc20e3d378392d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_vPos: {x: 195, y: 1150}
-  m_vSize: {x: 250, y: 250}
+  m_vPos: {x: 195, y: 1800}
+  m_vSize: {x: 500, y: 500}
   m_vScale: {x: 1, y: 1}
   m_bPosCenterX: 1
   m_bPosCenterY: 0

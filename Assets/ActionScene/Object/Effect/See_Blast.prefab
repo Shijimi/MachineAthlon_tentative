@@ -49,6 +49,9 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
 --- !u!33 &3300000
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -101,8 +104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: feefc09111fbe6e4595c8ae44a9c4f6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_iEffectTime: 70
-  m_fScaleAdd: .0799999982
+  m_fScaleAdd: .159999996
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

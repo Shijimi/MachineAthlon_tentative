@@ -83,7 +83,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_vPos: {x: 0, y: 0}
-  m_vSize: {x: 640, y: 1136}
+  m_vSize: {x: 1280, y: 2272}
   m_vScale: {x: 1, y: 1}
   m_bPosCenterX: 0
   m_bPosCenterY: 0

@@ -44,7 +44,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 361c40e458b9562409577da141fba2ad, type: 2}
+  - {fileID: 2100000, guid: 1f69bd11266ad4b29b3e94d89c82fce8, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -111,7 +111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_vPos: {x: 0, y: 0}
-  m_vSize: {x: 200, y: 100}
+  m_vSize: {x: 400, y: 200}
   m_vScale: {x: 1, y: 1}
   m_bPosCenterX: 0
   m_bPosCenterY: 0

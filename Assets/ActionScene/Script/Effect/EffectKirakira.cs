@@ -10,12 +10,16 @@ public class EffectKirakira : MonoBehaviour {
 	public	int		CntSpeed;		//	レンダラー変更スピード.
 	public	int		EffectTime;		//	エフェクト持続時間.
 	
+	GameObject		m_cPlayer;		//	プレイヤー.
 	int	m_iTimeCnt;					//	カウント.
 
     void Start()
     {
 		//	座標修正.
 		transform.position	+=	new Vector3( 0.0f, 4.0f, 0.0f );
+
+		//	プレイヤー取得.
+		m_cPlayer	=	GameObject.Find("Player");
 		
         //	レンダラーを変更.
         renderer.material.mainTexture	=	Kirakira_01;
@@ -26,6 +30,11 @@ public class EffectKirakira : MonoBehaviour {
 	
 	void Update()
     {
+		//	座標修正.
+		transform.position	=	new Vector3( m_cPlayer.transform.position.x,
+		                                	 transform.position.y,
+		                                	 transform.position.z );
+
 		//	カウントを進める.
 		m_iTimeCnt++;
 		

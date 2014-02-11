@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+	<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+	<ProductVersion>10.0.20506</ProductVersion>
+	<SchemaVersion>2.0</SchemaVersion>
+	<ProjectGuid>{73476E6C-3B6E-BE5B-4D04-2325FC1B799F}</ProjectGuid>
+	<OutputType>Library</OutputType>
+	<AppDesignerFolder>Properties</AppDesignerFolder>
+	<RootNamespace></RootNamespace>
+	<AssemblyName>Assembly-CSharp</AssemblyName>
+	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+	<FileAlignment>512</FileAlignment>
+	<BaseDirectory>Assets</BaseDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+	<DebugSymbols>true</DebugSymbols>
+	<DebugType>full</DebugType>
+	<Optimize>false</Optimize>
+	<OutputPath>Temp\bin\Debug\</OutputPath>
+	<DefineConstants>DEBUG;TRACE;UNITY_IPHONE;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_AUDIO_FMOD;ENABLE_MONO;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_GENERICS;ENABLE_SUBSTANCE;INCLUDE_WP8SUPPORT;ENABLE_WWW;ENABLE_IMAGEEFFECTS;UNITY_IPHONE_API;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_GAMECENTER;UNITY_IOS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;UNITY_4_3_4;UNITY_4_3;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_OSX;UNITY_TEAM_LICENSE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+	<DebugType>pdbonly</DebugType>
+	<Optimize>true</Optimize>
+	<OutputPath>Temp\bin\Release\</OutputPath>
+	<DefineConstants>TRACE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+	<Reference Include="System" />
+    <Reference Include="System.XML" />
+	<Reference Include="System.Core" />
+	<Reference Include="System.Xml.Linq" />
+	<Reference Include="UnityEngine">
+	  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEngine.dll</HintPath>
+	</Reference>
+	<Reference Include="UnityEditor">
+	  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEditor.dll</HintPath>
+	</Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\ActionScene\Script\Effect\EffectAura.cs" />
+     <Compile Include="Assets\ActionScene\Script\Effect\EffectBlast.cs" />
+     <Compile Include="Assets\ActionScene\Script\Effect\EffectFinish.cs" />
+     <Compile Include="Assets\ActionScene\Script\Effect\EffectKirakira.cs" />
+     <Compile Include="Assets\ActionScene\Script\Effect\EffectLight.cs" />
+     <Compile Include="Assets\ActionScene\Script\Effect\EffectReady.cs" />
+     <Compile Include="Assets\ActionScene\Script\Effect\EffectSmoke.cs" />
+     <Compile Include="Assets\ActionScene\Script\Effect\EffectSpeedUp.cs" />
+     <Compile Include="Assets\ActionScene\Script\Effect\EffectSpin.cs" />
+     <Compile Include="Assets\ActionScene\Script\Effect\EffectStart.cs" />
+     <Compile Include="Assets\ActionScene\Script\GameSystem\ActionScore.cs" />
+     <Compile Include="Assets\ActionScene\Script\GameSystem\GameSystem.cs" />
+     <Compile Include="Assets\ActionScene\Script\Map\BackGround.cs" />
+     <Compile Include="Assets\ActionScene\Script\Map\EffectCreator.cs" />
+     <Compile Include="Assets\ActionScene\Script\Map\Fade.cs" />
+     <Compile Include="Assets\ActionScene\Script\Map\Handle.cs" />
+     <Compile Include="Assets\ActionScene\Script\Map\ObjCreator.cs" />
+     <Compile Include="Assets\ActionScene\Script\Map\Scroll.cs" />
+     <Compile Include="Assets\ActionScene\Script\Map\Sea_Enemy.cs" />
+     <Compile Include="Assets\ActionScene\Script\Map\Sky_Cloud.cs" />
+     <Compile Include="Assets\ActionScene\Script\Map\Sky_Enemy.cs" />
+     <Compile Include="Assets\ActionScene\Script\Map\SpeedUpItem.cs" />
+     <Compile Include="Assets\ActionScene\Script\Map\StageTexture.cs" />
+     <Compile Include="Assets\ActionScene\Script\Player\Player.cs" />
+     <Compile Include="Assets\ActionScene\Script\Time\TimeBar.cs" />
+     <Compile Include="Assets\Common\Script\Button.cs" />
+     <Compile Include="Assets\Common\Script\ButtonManager.cs" />
+     <Compile Include="Assets\Common\Script\CameraSetting.cs" />
+     <Compile Include="Assets\Common\Script\DataManager.cs" />
+     <Compile Include="Assets\Common\Script\Number\Number.cs" />
+     <Compile Include="Assets\Common\Script\Number\ScoreNumber.cs" />
+     <Compile Include="Assets\Common\Script\Number\ScoreNumber1.cs" />
+     <Compile Include="Assets\Common\Script\Number\ScoreNumber2.cs" />
+     <Compile Include="Assets\Common\Script\Number\ScoreNumber3.cs" />
+     <Compile Include="Assets\Common\Script\Number\ScoreNumber4.cs" />
+     <Compile Include="Assets\Common\Script\Number\ScoreNumber5.cs" />
+     <Compile Include="Assets\Common\Script\Number\TimeNumber1.cs" />
+     <Compile Include="Assets\Common\Script\Number\TimeNumber2.cs" />
+     <Compile Include="Assets\Common\Script\ScoreBoard\ScoreBoard.cs" />
+     <Compile Include="Assets\Common\Script\ScoreBoard\ScoreBoardNum.cs" />
+     <Compile Include="Assets\Common\Script\SetPos2D.cs" />
+     <Compile Include="Assets\Common\Script\SingletonMonoBehaviour.cs" />
+     <Compile Include="Assets\MainMenuScene\Script\Cancel.cs" />
+     <Compile Include="Assets\MainMenuScene\Script\LeftBtn.cs" />
+     <Compile Include="Assets\MainMenuScene\Script\MainMenu.cs" />
+     <Compile Include="Assets\MainMenuScene\Script\Ranking.cs" />
+     <Compile Include="Assets\MainMenuScene\Script\RightBtn.cs" />
+     <Compile Include="Assets\MainMenuScene\Script\StartBtn.cs" />
+     <Compile Include="Assets\MainMenuScene\Script\Tutorial.cs" />
+     <Compile Include="Assets\MainMenuScene\Script\TutorialBtn.cs" />
+     <Compile Include="Assets\MainMenuScene\Script\Tutorial_1.cs" />
+     <Compile Include="Assets\MainMenuScene\Script\Tutorial_2.cs" />
+     <Compile Include="Assets\MainMenuScene\Script\Tutorial_3.cs" />
+     <Compile Include="Assets\ResultScene\Script\ReStart.cs" />
+     <Compile Include="Assets\ResultScene\Script\ResultMenu.cs" />
+     <Compile Include="Assets\ResultScene\Script\ResultScene.cs" />
+     <Compile Include="Assets\ResultScene\Script\ResultScore.cs" />
+     <Compile Include="Assets\ResultScene\Script\Return.cs" />
+     <Compile Include="Assets\ResultScene\Script\Score.cs" />
+     <None Include="Assets\ActionScene\Materials\Number\NewShader.shader" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+	   Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>

@@ -118,8 +118,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37a465d4039b1f646bbc20e3d378392d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_vPos: {x: 550, y: 200}
-  m_vSize: {x: 100, y: 100}
+  m_vPos: {x: 1200, y: 160}
+  m_vSize: {x: 200, y: 200}
   m_vScale: {x: 1, y: 1}
   m_bPosCenterX: 0
   m_bPosCenterY: 0
@@ -297,8 +297,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37a465d4039b1f646bbc20e3d378392d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_vPos: {x: 0, y: 950}
-  m_vSize: {x: 687, y: 260}
+  m_vPos: {x: 0, y: 1400}
+  m_vSize: {x: 1374, y: 520}
   m_vScale: {x: .5, y: .5}
   m_bPosCenterX: 1
   m_bPosCenterY: 0
@@ -639,7 +639,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_vPos: {x: 0, y: 0}
-  m_vSize: {x: 720, y: 1280}
+  m_vSize: {x: 1536, y: 2048}
   m_vScale: {x: 1, y: 1}
   m_bPosCenterX: 1
   m_bPosCenterY: 1
@@ -731,7 +731,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_vPos: {x: 0, y: 100}
-  m_vSize: {x: 716.5, y: 286.5}
+  m_vSize: {x: 1433, y: 573}
   m_vScale: {x: 1, y: 1}
   m_bPosCenterX: 1
   m_bPosCenterY: 0
@@ -773,8 +773,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37a465d4039b1f646bbc20e3d378392d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_vPos: {x: 250, y: 1100}
-  m_vSize: {x: 100, y: 100}
+  m_vPos: {x: 450, y: 1850}
+  m_vSize: {x: 200, y: 200}
   m_vScale: {x: 1, y: 1}
   m_bPosCenterX: 0
   m_bPosCenterY: 0
@@ -1002,8 +1002,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37a465d4039b1f646bbc20e3d378392d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_vPos: {x: 370, y: 1100}
-  m_vSize: {x: 100, y: 100}
+  m_vPos: {x: 900, y: 1850}
+  m_vSize: {x: 200, y: 200}
   m_vScale: {x: 1, y: 1}
   m_bPosCenterX: 0
   m_bPosCenterY: 0
@@ -1572,8 +1572,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7c0bf38ebecb2418062dca0ab30085, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_fViewHeight: 1280
-  m_fViewWidth: 720
+  m_fViewHeight: 2048
+  m_fViewWidth: 1536
 --- !u!1001 &1895070606
 Prefab:
   m_ObjectHideFlags: 0
@@ -1703,8 +1703,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37a465d4039b1f646bbc20e3d378392d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_vPos: {x: 0, y: 1100}
-  m_vSize: {x: 323, y: 121}
+  m_vPos: {x: 0, y: 1700}
+  m_vSize: {x: 646, y: 242}
   m_vScale: {x: 1, y: 1}
   m_bPosCenterX: 1
   m_bPosCenterY: 0

@@ -49,6 +49,9 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
 --- !u!33 &3300000
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -81,7 +84,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_vPos: {x: 0, y: 0}
-  m_vSize: {x: 240, y: 240}
+  m_vSize: {x: 480, y: 480}
   m_vScale: {x: 1, y: 1}
   m_bPosCenterX: 0
   m_bPosCenterY: 0
@@ -104,7 +107,7 @@ MonoBehaviour:
   Spin_01: {fileID: 2800000, guid: 701957a0291f91944b2106ce122e14a8, type: 3}
   Spin_02: {fileID: 2800000, guid: 531b627d3f58a1e4f8c183aaf7fe5753, type: 3}
   CntSpeed: 20
-  EffectTime: 70
+  EffectTime: 60
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
